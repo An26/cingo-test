@@ -15,15 +15,17 @@ class IncrementComponent extends Component {
   handleClick() {
     if (this.props.basic.isOpen) {
       this.props.basicActions.closeButton()
+      
     } else {
       this.props.basicActions.openButton()
     }
   }
 
   render() {
+    const table = <div>this is a table</div>;
     return (
       <button onClick={this.handleClick}>
-        {this.props.basic.isOpen ? 'Open' : 'Closed'}
+        {this.props.basic.isOpen ? 'See Table' : 'Close Table'}
       </button>
     );
   }
